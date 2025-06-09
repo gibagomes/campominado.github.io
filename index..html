@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campo Minado</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Campo Minado</h1>
+
+    <!-- Seleção de dificuldade -->
+    <select id="dificuldade" onchange="iniciarJogo()">
+      <option value="5">Fácil (5x5)</option>
+      <option value="7">Médio (7x7)</option>
+      <option value="10">Difícil (10x10)</option>
+    </select>
+
+    <!-- Botão de reinício -->
+    <button onclick="iniciarJogo()">Reiniciar Jogo</button>
+
+    <!-- Grade do tabuleiro -->
+    <div id="tabuleiro" class="tabuleiro"></div>
+
+    <!-- Mensagem de status -->
+    <p id="mensagem" class="mensagem"></p>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+   if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(() => console.log("Service Worker registrado com sucesso"))
+      .catch(error => console.log("Erro ao registrar Service Worker:", error));
+   }
+  </script>
+
+</body>
+</html>
