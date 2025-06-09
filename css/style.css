@@ -1,0 +1,57 @@
+/body {
+  margin: 0; /* Remove as margens da página */
+  padding: 0; /* Remove os preenchimentos padrão da página */
+  background-color: #1e272e; /* Fundo escuro para o jogo */
+  color: white; /* Cor do texto padrão */
+  font-family: Arial, sans-serif; /* Fonte limpa e legível */
+  display: flex; /* Ativa o modo flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Altura igual à altura da tela */
+}
+/* Container principal do jogo */
+.container {
+  text-align: center; /* Centraliza o conteúdo dentro do container */
+}
+
+/* Título do jogo */
+h1 {
+  margin-bottom: 10px; /* Espaço abaixo do título */
+}
+/* Estilo do seletor de dificuldade e botão de reinício */
+select, button {
+  margin: 5px; /* Espaço ao redor do elemento */
+  padding: 10px; /* Espaço interno */
+  border-radius: 5px; /* Cantos arredondados */
+  border: none; /* Remove borda padrão */
+  font-size: 16px; /* Tamanho do texto */
+}
+/* Grade do tabuleiro */
+.tabuleiro {
+  margin-top: 20px; /* Espaço acima da grade */
+  display: grid; /* Ativa o grid layout */
+  justify-content: center; /* Centraliza a grade */
+  gap: 4px; /* Espaçamento entre as células */
+}
+/* Células do campo minado */
+.cela {
+  width: 40px; /* Largura da célula */
+  height: 40px; /* Altura da célula */
+  font-size: 18px; /* Tamanho do conteúdo */
+  background-color: #2f3542; /* Cor de fundo padrão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  border-radius: 4px; /* Cantos arredondados */
+  cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+}
+/* Estilo da célula quando está desativada (já clicada ou jogo encerrado) */
+.cela:disabled {
+  background-color: #57606f; /* Cinza escuro */
+  cursor: not-allowed; /* Remove a interatividade */
+}
+/* Mensagem de status (vitória ou derrota) */
+.mensagem {
+  margin-top: 20px; /* Espaço acima da mensagem */
+  font-size: 20px; /* Tamanho do texto */
+}
+
